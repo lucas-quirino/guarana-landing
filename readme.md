@@ -1,4 +1,4 @@
-Vercel link: https://smartwatch-three.vercel.app/
+Vercel link: https://guarana-landing-ox3lm1dp8-lucas-quirino-dev.vercel.app/
 
 ## Guaraná Antárctica
 
