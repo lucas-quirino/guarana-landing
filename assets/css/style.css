@@ -1,0 +1,304 @@
+/*********** IMPORTS  **********
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #4caf50;
+    font-size: 12px;
+    transition: ease-in-out 0.3s; /* transition */
+    overflow: hidden;
+}
+ul, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    text-decoration: none;
+    color: #ffd000;
+    border-bottom: 1px solid #ffd000;
+}
+
+/*
+********** NAVIGATION BAR **********
+MOBILE MENU CONTROLS IN MEDIA QUERY SECTION ********/
+nav.navbar {
+    z-index: 99;
+    display: flex;
+    padding: 0 5vw;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    top: 0; left: 0; right: 0;
+}
+.navbar .logo .logo-brand {
+    position: relative;
+    top: -10px;
+}
+.main-menu {
+    color: black;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    text-transform: uppercase;
+}
+.menu-btn {
+    position: relative;
+    font-size: 40px;
+    font-weight: bold;
+    display: none;
+    bottom: 2px;
+}
+.navbar ul.main-menu .close-btn {
+    display: none;
+}
+
+/*
+********** HEADER ***********/
+header#header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    z-index: -1;
+}
+.content .tagline  {
+    flex: 0;
+    font-size: 30px;
+    color: rgb(239, 255, 235);
+}
+.content .pages  {
+    position: absolute;
+    right: 20px;
+    font-size: 3vw;
+    color: rgb(14, 70, 0);
+}
+.content .pages span  {
+    font-size: 3.5vw;
+    color: black;
+    font-weight: 400;
+}
+.content h1.title  {
+    flex: 0 0 100%;
+    font-size: 20vw;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #ffc107;
+    text-shadow: 3px 3px #ff5100;
+}
+.content .more  {
+    flex: 1;
+}
+.content button  {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    background-color: #0e0e0e;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+}
+.content button:hover  {
+    color: rgb(0, 0, 0);
+    background-color: #ffd000;
+    border: none;
+}
+.description {
+    position: absolute;
+    max-width: 300px;
+    right: 5px; top: 340px;
+}
+.description p:nth-child(1) {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.description p:nth-child(2) {
+    line-height: 2;
+    padding-bottom: 8vh;
+}
+.description span {
+    color: rgb(215, 253, 205);
+}
+
+/*
+********** BOTTLE JUICE ***********/
+.guarana {
+    position: absolute;
+    top: 55%; left: 50%;
+    z-index: 1;
+    animation: float 2s ease-in-out infinite;
+}
+.guarana img {
+    max-height: 395px;
+}
+@keyframes float {
+    0% {
+        transform: translate(-50%, -46%);
+    }
+    50% {
+        transform: translate(-50%, -52%);
+    }
+    100% {
+        transform: translate(-50%, -46%);
+    }
+}
+
+/*
+********** PARALLAX SCENE ***********/
+.scene {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+********** LEAVES***********/
+.leaves {
+    z-index: -999;
+    width: 100%; height: 100vh;
+    position: absolute;
+}
+.leaves img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.leaves .layer:nth-child(1) {
+    top: 50vh !important;
+    left: 70vw !important;
+}
+.leaves .layer:nth-child(2) {
+    top: 10vh !important;
+    left: 60vw !important;
+}
+.leaves .layer:nth-child(3) {
+    top: 70vh !important;
+    left: 20vw !important;
+}
+.leaves .layer:nth-child(4) {
+    top: 50vh !important;
+    left: 20vw !important;
+}
+.leaves .layer:nth-child(5) {
+    top: 15vh !important;
+    left: 15vw !important;
+}
+
+/*
+********** ARROWS ***********/
+.arrows .prev {
+    position: absolute;
+    top: 50%;
+    left: 5vw;
+    color: black;
+}
+.arrows .next {
+    position: absolute;
+    top: 50%;
+    right: 5vw;
+    color: black;
+}
+.arrows button {
+    border: 1px solid black;
+    background: rgba(167, 255, 126, 0.548);
+    border-radius: 50%;
+    width: 50px; height: 50px;
+    outline: none;
+}
+.arrows button:hover {
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    background-color: #ffd000;
+    border: none;
+}
+
+/*
+********** MEDIA QUERY ***********/
+@media only screen and (max-width: 695px) {
+    body {
+        overflow-y: scroll;
+    }
+    header#header {
+        position: absolute;
+        top: 77vh;
+    }
+    .description {
+        position: absolute;
+        max-width: 320px;
+        right: 5px; top: 220px;
+    }
+    .guarana {
+        top: 40%;
+    }
+}
+/* MOBILE MENU MEDIA QUERY IS HERE
+** ROOT CHANGES - margin, padding, colors menu... IS HERE ******/
+@media screen and (max-width: 1350px) {
+    :root {
+        --padding-header: 0px 4vw;
+        --padding-nav: 20px 4vw;
+        --padding-sections: 110px 4vw;
+        --padding-other-elements: 2vw;
+        --padding-img: 2vw;
+        --padding-footer: 5px 4vw;
+    }
+    .menu-btn {
+        display: block;
+        cursor: pointer;
+    }
+    .navbar ul.main-menu {
+        z-index: 9999;
+        display: block;
+        position: fixed;
+        background-color: #ecff81;
+        box-shadow: var(--box-shadow);
+        top: 0; left: 0;
+        width: 70%; height: 100%;
+        transform: translateX(-1200px);
+        opacity: 0.9;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: var(--fontsize-h2);
+        color: white;
+        transition: transform 0.5s ease-in-out;
+    }
+    .navbar ul.main-menu a {
+        font-size: 1.8rem;
+    }
+    .navbar ul.main-menu a.account {
+        font-size: 1.2rem;
+    }
+    .navbar ul.main-menu .close-btn {
+        display: block;
+        position: fixed;
+        top: 32px; right: 40px;
+    }
+    .navbar ul.main-menu.show {
+        transform: translateX(-20px);
+    }
+}
+
+/*
+********** REFERENCES
+1. www.w3schools.com
+2. www.freecodecamp.org
+3. www.alura.com.br
+4. developer.mozilla.org
+5. getbootstrap.com
+6. greensock.com/gsap/
+***********/
