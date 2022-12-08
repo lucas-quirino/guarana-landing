@@ -4,4 +4,4 @@ Vercel link: https://smartwatch-three.vercel.app/
 
 <br>
 
-![Guaraná Antárctica exemple](assets/img/../../img/readme.png)
+![Guaraná Antárctica exemple](assets/img/readme.png)
